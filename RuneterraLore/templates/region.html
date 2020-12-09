@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block strona %}
+
+<section class="head" style="background-image: url('/media/{{ region.image_bg  }}');">
+	
+	<div class="container">
+		<div class="row ">
+			
+
+			<div class="col-md-12">
+				
+				<div class="card headline region-card">
+					
+					    <h1 style="font-size: 70px;">{{ region.name }}</h1>
+					  </div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<section class="region-info">
+	
+	<div class="container">
+		<div class="row">
+			
+			
+
+
+			<div class="col-md-8 offset-md-2 description" data-aos="zoom-in-up" data-aos-duration="3000">
+				{{ region.description }}
+			</div>
+
+		</div>
+		<div class="row region_champions">
+			<h3 data-aos="zoom-in-up" data-aos-duration="2000">Postacie należące do tego regionu</h3><br>
+			<div class="w-100"></div>
+			{% for champion in champions %}
+							<div class="col-md-3 mb-5">
+								<div class="region-panel champ-panel">
+									<img src="/media/{{ champion.image }}">
+									<a href="{% url 'champion_page' champion.name %}">
+									<div class="region-panel-info" >
+										{{ champion.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+								</a>
+								</div>
+
+							</div>
+			{% empty %}
+				<div class="more-soon col-md-12"> Aktualnie brak bohaterów należacych do tego regionu</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+
+
+{% endblock %}

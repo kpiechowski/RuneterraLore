@@ -1,0 +1,70 @@
+.champion-head{
+	height: 70vh;
+}
+.champion-head-panel{
+position: relative;
+top: 130px;
+}
+.champion-head-panel img{
+	filter: grayscale(0);
+	filter: brightness(1);
+}
+.champion-body{
+	
+	background-image: url('darktheme.png');
+	background-attachment: fixed;
+	border-top: 2px solid #D4AF37; 
+	padding-top: 150px;
+	box-shadow: 0 -10px 6px #222;
+}
+.champion-name{
+	position: relative;
+	bottom: 40px;
+	border: 2px solid #D4AF37; 
+}
+.champion-introduction-title{
+	text-align: center;
+	font-size: 35px;
+	color: #D4AF37;
+}
+.champion-introduction{
+	margin-top: 30px;
+	text-align:center;
+	padding:30px;
+	font-size: 21px;
+	border-bottom: 2px solid #D4AF37; 
+	margin-bottom: 50px;
+}
+.champion-bio{
+	padding:60px;
+	font-size: 21px;
+	margin-top:30px;
+	border: 2px solid #D4AF37; 
+	border-top:none;
+	border-bottom: none;
+	margin-bottom:50px;
+	text-align: justify;
+	line-height: 30px;
+	color: #999;
+}
+.champion-bio > p::first-letter{
+	font-size: 50px;
+	color: #D4AF37;
+	font-family: 'Aladin', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+.w-100none{
+	border: none;
+	margin-bottom:0;
+
+}

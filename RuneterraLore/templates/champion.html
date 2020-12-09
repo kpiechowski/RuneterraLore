@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block strona %}
+
+<section class="head champion-head" style="background-image: url('/media/{{ region.image_bg  }}');">
+	
+	<div class="container">
+		<div class="row justify-content-center champion-head-panel">
+			
+			<div class="col-md-3 ">
+								<div class="region-panel champ-panel ">
+									<img src="/media/{{ champion.image }}">
+									
+								</div>
+				
+			</div>
+			<div class="w-100 w-100none"></div>
+			<div class="col-md-5" data-aos="zoom-in-up" data-aos-duration="1500">
+					<div class="card headline region-card champion-name">
+						    <h1 style="font-size: 60px;">{{ champion.name }}</h1>
+						    {{region.name}}
+						  </div>
+				</div>
+			
+		</div>
+	</div>
+
+</section>
+<section class="champion-body">
+	
+	<div class="container">
+		
+		<div class="row">
+			<div class="champion-introduction-title col-md-12">Wprowadzenie</div>
+
+			<div class="champion-introduction col-md-12 card">
+				{{champion.introduction}}
+			</div>
+			<div class="champion-introduction-title col-md-12">Biografia</div>
+			<div class="champion-bio col-md-12 card"><p>{{champion.bio}}</p></div>
+
+		</div>
+		<div class="row region_champions">
+			<h3 data-aos="zoom-in-up" data-aos-duration="2000">Postacie należące do tego regionu</h3><br>
+			<div class="w-100"></div>
+			{% for champion in champions %}
+							<div class="col-md-3 mb-5">
+								<div class="region-panel champ-panel">
+									<img src="/media/{{ champion.image }}">
+									<a href="{% url 'champion_page' champion.name %}">
+									<div class="region-panel-info" >
+										{{ champion.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+								</a>
+								</div>
+
+							</div>
+			
+			{% endfor %}
+
+	</div>
+
+
+</section>
+
+
+
+{% endblock %}

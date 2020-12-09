@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Runeterra</title>
+	<meta charset="UTF-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/c90d1125a4.js" crossorigin="anonymous"></script>
+	<!-- fonts -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
+	<!-- animate on scroll -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- my styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'region.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'champions.css' %}">
+
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark  fixed-top">
+		  <a class="navbar-brand" href="#">RuneterraLore<i style="margin-left: 2px; transform: rotate(-20deg);" class="fas fa-book"></i></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'home_page'%}#regions">Regiony</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="{% url 'home_page'%}#champions">Bohaterowie</a>
+		      </li>
+		      
+		      <li class="nav-item">
+		        <a class="nav-link" href="#">Inne</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
+	</header>
+
+{% block strona %}	
+
+
+
+{% endblock %}
+
+<footer>
+	<div class="footer-top">„Wszystko musi sie dobrze komponowac.” ~ Jhin</div>
+	<div class="footer-mid">
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-4">
+					<h4 class="headline">Nawigacja</h4>
+					<ul>
+						<li><a href="{% url 'home_page'%}">Start</a></li>
+						<li><a href="{% url 'home_page'%}#regions">Regiony</a></li>
+						<li><a href="{% url 'home_page'%}#champions">Bohaterowie</a></li>
+						<li><a href="{% url 'home_page'%}">Inne</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h4 class="headline">Kontakt</h4>
+					<ul>
+						<li><i class="fas fa-envelope mr-1"></i>kpiechowski25@gmail.com</li>
+						<li><i class="fas fa-phone mr-1"></i>794 293 767</li>
+						<li><i class="fab fa-facebook-square mr-1"></i>FaceBook</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h4 class="headline">Linki</h4>
+					<ul>
+						<li><a href="https://map.leagueoflegends.com/">Mapa Uniwersum</a></li>
+
+						<li><a href="https://universe.leagueoflegends.com/pl_PL/">Strona Uniwersum </a></li>
+
+						<li><a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki"> Fanowska Strona Wiki</a></li>
+					</ul>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+	<div class="footer-bottom">Website made by Krzysztof Piechowski 2020</div>
+</footer>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

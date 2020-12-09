@@ -1,0 +1,73 @@
+.head{
+
+	
+	height:90vh;
+	text-align: center;
+	display: flex;
+	align-items: flex-end;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.region-card{
+	margin:0;
+	padding:8px 0 0 0;
+	color: #D4AF37;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	font-family: 'Aladin', cursive;
+	/*font-family: 'Merriweather', serif;*/
+	/*box-shadow: 0 0 10px #D4AF37;*/
+	background-color: rgba(20,20,20,1);
+}
+
+.region-info{
+	width: 100%;
+	
+	background-image: url('darktheme.png');
+	background-attachment: fixed;
+	border-top:2px solid #D4AF37;
+	text-align: center;
+	padding-bottom: 100px;
+}
+.img-panel img{
+	width: 100%;
+	border:2px solid #D4AF37;
+	border-radius: 4px;
+	
+}
+.img-panel{
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.description{
+	line-height: 40px;
+	font-size: 20px;
+	margin-top: 50px;
+	background-color: rgba(20,20,20, 0.9);
+	border-radius: 5px;
+	padding:15px;
+	/*box-shadow: 0 0 10px #D4AF37;*/
+	text-align: justify;
+}
+.description::first-letter{
+	font-size: 50px;
+	color: #D4AF37;
+	font-family: 'Aladin', cursive;
+}
+.region_champions{
+	text-align: center;
+	justify-content: center;
+	margin-top: 100px;
+	border-bottom: 2px solid #D4AF37;
+
+}
+.region_champions h3{
+	font-size: 35px;
+	color: #D4AF37
+}
+.w-100{
+	border-bottom: 2px solid #D4AF37;
+	margin-bottom: 100px;
+}

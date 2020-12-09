@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block strona %}
+	<main>
+		<div class="container introduction">
+			
+				<div class="card col-md-12 " data-aos="zoom-in-up" data-aos-duration="3000">
+					  <div class="card-header headline">
+					    <h1 style="font-size: 25px;">RuneterraLore</h1>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title headline">Więcej niż tylko gra!</h5>
+					    <p class="card-text">Szukasz czegoś wiecej niz standardowe potyczki 5vs5? Chciałbys dowiedzieć się czegoś wiecej o swoich ulubionych bohaterach, lub poznac całą historię Runeterry? Jestes w indealnym miejscu żeby zacząc swoją przygodę z uniwersum League of Legends.</p>
+					    <a href="#" class="btn bg-gold">PRZEGLĄDAJ</a>
+					  </div>
+				
+				
+
+
+				</div>
+
+
+		</div>
+		<section class="start">
+			<div class="container">
+
+				<div class="row">
+					<div class="start-panel col-md-6">
+						<div class="card-header headline">
+					    	<h3 style="">Na początek...</h3>
+					  	</div>
+						<div class="start-text mt-3">League of legends to jedna z najpopularniejszych gier z gatunku MOBA. Większośc graczy nawet nie zdaje sobie sprawy z tego jak rozwinięta jest jej fabuła. Na tej stronie znajdziesz podstawowe informacje dotyczące każdego z bohaterów oraz regionu ze swiata "Lola". Wejście w świat uniwersum może być czasochłonne dlatego nie poddawaj się gdy treści okażą się zbyt duże. <br><u>Powodzenia Przywoływaczu!</u></div>
+					</div>
+
+					<div class="start-panel col-md-6">
+						<img src="{% static 'lol_champions.jpg' %}" width="100%">
+					</div>
+				</div>
+
+				<div class="funfacts">
+					<div class="headline funfacts-head col-md-10 offset-md-1">
+						Przykładowe rzeczy o których nie miałeś pojęcia.
+					</div>
+					<div class="row">
+						<div class="col-md-4 funfact-col">
+							<div class="funfacts-panel">
+								<img src="{% static 'azakana.png' %}">
+								<figcaption class="mt-2">Demony</figcaption>
+								<div class="funfacts-info">Drzewo genealogiczne pokazujące w jaki sposób rozwijają sie demony</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-4 funfact-col">
+							<div class="funfacts-panel">
+								<img src="{% static 'vastaje.jpg' %}">
+								
+								<div class="funfacts-info">Ród Vastaya - Chimery wywodzące się z Ioni, połączenie rasy ludzkiej z magiczną.</div>
+								<figcaption class="mt-2">Chimery</figcaption> 
+							</div>
+
+						</div>
+
+
+						<div class="col-md-4 funfact-col">
+							
+								<div class="funfacts-panel">
+									<img src="{% static 'blackrose.jpg' %}">
+									<figcaption class="mt-2">Czarna Róża</figcaption>
+									<div class="funfacts-info">Black Rose - Mroczna organizacja która zza kulis sprawuje władzę w całym Noxusie</div>
+								</div>
+							
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+			</div>
+			
+
+			
+		</section>
+
+
+		<section class="regions" id="regions">
+				<div class="container">
+					<div class="row">
+						{% for region in start_reg %}
+
+							<div class="col-md-4 mb-5">
+								<div class="region-panel">
+									<img src="/media/{{ region.image }}">
+									<a href="{% url 'region_page' region.name %}">
+									<div class="region-panel-info" >
+										
+										{{ region.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+									</a>
+								</div>
+
+							</div>
+						{% endfor %}
+					</div>
+					<div class="row collapse" id="collapseRegions">
+						
+						{% for region in collapse_reg %}
+
+							<div class="col-md-4 mb-5">
+								<div class="region-panel">
+									<img src="/media/{{ region.image }}">
+									<a href="{% url 'region_page' region.name %}">
+									<div class="region-panel-info" >
+										
+										{{ region.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+									</a>
+								</div>
+							</div>
+
+						{% endfor %}
+
+
+					</div>
+					<div class="row justify-content-center">
+						<button class="btn bg-gold" type="button" data-toggle="collapse" data-target="#collapseRegions" aria-expanded="false" aria-controls="collapseExample">
+	   						Rozwiń
+	 					</button>
+	 				</div>
+
+				</div>
+				
+			
+
+
+
+			
+		</section>
+		<section class="how-start">
+			
+
+			<div class="container introduction introduction-2">
+			
+				<div class="card col-md-12 ">
+					<div class="introduction-pop btn bg-gold">WSKAZÓWKA</div>
+					  <div class="card-header headline">
+					    <h1 style="font-size: 25px;">Jak zacząć?</h1>
+					  </div>
+					  <div class="card-body">
+					    <h5 class="card-title headline">Początki mogą wydawać się trudne!</h5>
+					    <p class="card-text">
+					    Zdajemy sobię sprawę ze początki są bardzo trudne i moga wydawać się skomplikowane. Relacje między postaciami oraz to jak wpłyneły one na losy całej runeterry to lektura na całe dni! Dlatego polecamy zacząć swoja przygode od swojego ulubionego bohatera i powoli wdrażać się w całe uniwersum.</p>
+					    <!-- <a href="#" class="btn bg-gold">PRZEGLĄDAJ</a> -->
+					  </div>
+				
+				
+
+
+				</div>
+
+
+		</div>
+
+
+
+
+
+		</section>
+
+		<section class="champions" id="champions">
+			
+			<div class="container">
+				
+
+				<div class="row">
+						{% for champion in start_champ %}
+							<div class="col-md-3 mb-5">
+								<div class="region-panel champ-panel">
+									<img src="/media/{{ champion.image }}">
+									<a href="{% url 'champion_page' champion.name %}">
+									<div class="region-panel-info" >
+										{{ champion.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+								</a>
+								</div>
+
+							</div>
+						{% endfor %}
+					</div>
+					<div class="row collapse" id="collapseChampions">
+						
+						{% for champion in collapse_champ %}
+
+							<div class="col-md-3 mb-5">
+								<div class="region-panel champ-panel">
+									<img src="/media/{{ champion.image }}">
+									<a href="{% url 'champion_page' champion.name %}">
+									<div class="region-panel-info" >
+										{{ champion.name }}
+										<i class="fas fa-caret-right ml-2 arrow"></i>
+										
+									</div>
+								</a>
+								</div>
+							</div>
+
+						{% endfor %}
+
+						
+						<div class="more-soon col-md-12"> Więcej bohaterów już wkrótce </div>
+
+					</div>
+					<div class="row justify-content-center">
+						<button class="btn bg-gold" type="button" data-toggle="collapse" data-target="#collapseChampions" aria-expanded="false" aria-controls="collapseExample">
+	   						Rozwiń
+	 					</button>
+	 				</div>
+
+
+
+
+			</div>
+
+
+		</section>
+
+
+
+
+
+
+
+	</main>
+{% endblock %}
+
+
